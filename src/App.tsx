@@ -1,24 +1,33 @@
 import Footer from "./components/Footer"
 import Navbar from "./components/Navbar"
+import Technologies from "./components/Technologies";
+import Projects from "./components/Projects";
 
+
+const name = "Jorge";
 
 function App() {
-
   return (
     <>
-    <div className="min-h-screen">
       <Navbar />
-      <section className="mt-20">
-        <div className="pl-5">
-          <h5>Hi, im </h5>
-          <h1 className="text-6xl">this is an example</h1>
-        </div>
-      </section>
-      <section className="mt-6 mb-3">
-        <button>Click me</button>
-      </section>
+      <div className="min-h-screen">
+        <section className="text-white text-center flex flex-col justify-center items-center" id="home">
+          <div>
+            <h5 className="text-xl mr-24">Hi, I'm</h5>
+            <h1 className="text-6xl">{name}</h1>
+          </div>
+          <div>
+            <p className="mt-2">Fullstack Web Developer</p>
+          </div>
+        </section>
+        <section className="mt-6">
+          <Projects />
+        </section>
+        <section className="mt-6 mb-6">
+          <Technologies />
+        </section>
+      </div>
       <Footer />
-    </div>
     </>
   )
 }

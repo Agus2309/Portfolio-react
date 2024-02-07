@@ -10,6 +10,9 @@ export default {
         customBlue: "#0b192f",
       },
     },
+    screens:{
+      'xxs': '540px'
+    },
   },
   plugins: [],
 };

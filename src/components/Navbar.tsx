@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
     return (
         <>
             <header className="rounded text-white p-7">
-                <div className="container mx-auto flex justify-between items-center">
+                <div className="container flex justify-between max-w-12xl">
                     <div className="text-red-500 font-bold text-xl">
                         <ArrowBackIosNewOutlinedIcon />
                         <ArrowBackIosNewOutlinedIcon />
@@ -18,10 +18,10 @@ const Navbar: React.FC = () => {
                         <ArrowForwardIosOutlinedIcon />
                     </div>
                     <div className="flex space-x-4">
-                        <a href="#home" className="text-white hover:text-gray-300">Home</a>
-                        <a href="#about" className="text-white hover:text-gray-300">About</a>
-                        <a href="#projects" className="text-white hover:text-gray-300">Projects</a>
-                        <a href="#contact" className="text-white hover:text-gray-300">Contact</a>
+                        <a href="#home" className="text-white hover:text-gray-300 mt-1">Home</a>
+                        <a href="#about" className="text-white hover:text-gray-300 mt-1">About</a>
+                        <a href="#projects" className="text-white hover:text-gray-300 mt-1">Projects</a>
+                        <a href="#contact" className="text-white hover:text-gray-300 mt-1">Contact</a>
                         <Button variant="outlined" className="flex-grow">
                             Resume
                         </Button>
