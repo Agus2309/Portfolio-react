@@ -1,12 +1,25 @@
-const Footer: React.FC = () => {
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { MdMail } from 'react-icons/md';
 
+const Footer: React.FC = () => {
     return (
         <>
-            <footer className="bg-gray-600 rounded p-4  text-white text-center static bottom-0">
-                <p>&copy; 2024 Your Company. All rights reserved.</p>
+            <footer className="bg-gray-600 rounded pt-5 p-4 text-white text-center static bottom-0">
+            <p className='mt-2'>&copy; 2024 Agus2309 | All rights reserved.</p>
+                <div className="flex justify-center items-center mt-6 space-x-4">
+                    <a href="https://www.linkedin.com/">
+                        <FaLinkedin className="text-white mx-2" size={24} />
+                    </a>
+                    <a href="https://github.com/">
+                        <FaGithub className="text-white mx-2" size={24} />
+                    </a>
+                    <a href="mailto:your-email@example.com">
+                        <MdMail className="text-white mx-2" size={24} />
+                    </a>
+                </div>
             </footer>
         </>
     )
 }
 
-export default Footer
+export default Footer;

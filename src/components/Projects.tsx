@@ -34,6 +34,11 @@ const images = [
     imgPath:
       'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
   },
+  {
+    label: 'Goč, Serbia',
+    imgPath:
+      'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
+  },
 ];
 
 const Projects: React.FC = () => {
@@ -56,12 +61,18 @@ const Projects: React.FC = () => {
 
     return (
             <>
-              <div className="max-w-12xl mx-auto justify-center">
-                <Box sx={{ maxWidth: 400, flexGrow: 1 }}> {/* esto hace que se bloquee el width*/}
+              <div className="flex flex-wrap">
+                <h1 className="text-3xl text-white font-semibold mb-5 ml-3 relative">
+                    Projects
+                </h1>
+            </div>
+              <div className="max-w-3xl mx-auto justify-center">
+                <Box sx={{ flexGrow: 2 }}> {/* esto hace que se bloquee el width*/}
                   <Paper
                     square
-                    elevation={0}
+                    elevation={12}
                     sx={{
+                      borderRadius: 1,
                       display: 'flex',
                       alignItems: 'center',
                       height: 50,
@@ -83,9 +94,9 @@ const Projects: React.FC = () => {
                           <Box
                             component="img"
                             sx={{
-                              height: 255,
+                              height: 'auto',
                               display: 'block',
-                              maxWidth: 400,
+                              maxWidth: 'auto',
                               overflow: 'hidden',
                               width: '100%',
                             }}
@@ -97,6 +108,7 @@ const Projects: React.FC = () => {
                     ))}
                   </AutoPlaySwipeableViews>
                   <MobileStepper
+                    sx={{borderRadius: 1}}
                     steps={maxSteps}
                     position="static"
                     activeStep={activeStep}

@@ -2,28 +2,27 @@ import Footer from "./components/Footer"
 import Navbar from "./components/Navbar"
 import Technologies from "./components/Technologies";
 import Projects from "./components/Projects";
+import About from "./components/About";
 
 
-const name = "Jorge";
 
 function App() {
   return (
     <>
       <Navbar />
       <div className="min-h-screen">
-        <section className="text-white text-center flex flex-col justify-center items-center" id="home">
-          <div>
-            <h5 className="text-xl mr-24">Hi, I'm</h5>
-            <h1 className="text-6xl">{name}</h1>
-          </div>
-          <div>
-            <p className="mt-2">Fullstack Web Developer</p>
+        <section className="mt-4 mb-15" id="home">
+          <div className="mx-auto border rounded-xl max-w-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
+            <h1 className="p-5 text-center text-white font-black text-9xl"> Welcome! </h1>
           </div>
         </section>
-        <section className="mt-6">
+        <section className="mt-10" id="about">
+          <About />
+        </section>
+        <section id="projects" className="pt-3 mt-6">
           <Projects />
         </section>
-        <section className="mt-6 mb-6">
+        <section className="mt-10 mb-8">
           <Technologies />
         </section>
       </div>
