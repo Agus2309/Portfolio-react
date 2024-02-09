@@ -37,7 +37,7 @@ const Technologies: React.FC = () => {
         <>
             <div className="flex flex-wrap">
                 <h1 className="text-3xl text-white font-semibold mb-5 ml-3 relative">
-                    Tools and Technologies
+                    Tools and Technologies ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
                 </h1>
             </div>
             <div className="flex flex-wrap justify-center max-w-3xl mx-auto">

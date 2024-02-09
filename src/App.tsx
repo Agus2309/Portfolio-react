@@ -12,8 +12,8 @@ function App() {
       <Navbar />
       <div className="min-h-screen">
         <section className="mt-4 mb-15" id="home">
-          <div className="mx-auto border rounded-xl max-w-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
-            <h1 className="p-5 text-center text-white font-black text-9xl"> Welcome! </h1>
+          <div className="mx-auto border rounded-3xl max-w-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
+            <h1 className="p-5 text-center text-white font-black text-9xl"> Welcome!</h1>
           </div>
         </section>
         <section className="mt-10" id="about">

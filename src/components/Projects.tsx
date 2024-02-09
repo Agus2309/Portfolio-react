@@ -62,10 +62,10 @@ const Projects: React.FC = () => {
     return (
             <>
               <div className="flex flex-wrap">
-                <h1 className="text-3xl text-white font-semibold mb-5 ml-3 relative">
-                    Projects
-                </h1>
-            </div>
+                  <h1 className="text-3xl text-white font-semibold mb-5 ml-3 relative">
+                      Projects ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                  </h1>
+              </div>
               <div className="max-w-3xl mx-auto justify-center">
                 <Box sx={{ flexGrow: 2 }}> {/* esto hace que se bloquee el width*/}
                   <Paper
@@ -109,6 +109,7 @@ const Projects: React.FC = () => {
                   </AutoPlaySwipeableViews>
                   <MobileStepper
                     sx={{borderRadius: 1}}
+                    variant="progress"
                     steps={maxSteps}
                     position="static"
                     activeStep={activeStep}

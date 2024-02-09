@@ -4,6 +4,11 @@ const About: React.FC = () => {
 
     return (
         <>
+            <div className="flex flex-wrap">
+                  <h1 className="text-3xl text-white font-semibold mb-5 ml-3 relative">
+                      About Me ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                  </h1>
+            </div>
             <div className="flex justify-around">
                 <div className="max-w-xs border rounded-xl text-center align-middle text-white bg-indigo-900 shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
                     <div className="p-5">
