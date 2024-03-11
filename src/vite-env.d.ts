@@ -6,3 +6,4 @@ declare module '@nextui-org/react';
 declare module 'react-swipeable-views';
 declare module 'react-swipeable-views-utils';
 
+

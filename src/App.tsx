@@ -1,34 +1,70 @@
-import Footer from "./components/Footer"
-import Navbar from "./components/Navbar"
+
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 import Technologies from "./components/Technologies";
 import Projects from "./components/Projects";
 import About from "./components/About";
+import Contact from "./components/Contact";
+import { Element } from "react-scroll";
+import ScrollAnimation from 'react-animate-on-scroll';
 
-
+const name = 'Jorge';
 
 function App() {
   return (
     <>
-      <Navbar />
-      <div className="min-h-screen">
-        <section className="mt-4 mb-15" id="home">
-          <div className="mx-auto border rounded-3xl max-w-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
-            <h1 className="p-5 text-center text-white font-black text-9xl"> Welcome!</h1>
+      <div className="min-h-screen min-w-full">
+        <Element name="home" id="home">
+          <div
+            className="bg-cover bg-center pb-20 "
+            style={{
+              height: '100vh',
+              backgroundImage: `url('/background.jpg')`,
+            }}
+          >
+            <Navbar/>
+            <section className="mt-24 mb-24">
+              <div className="ml-8 text-white">
+                <h1 className="text-4xl lg:text-8xl md:text-8xl sm:text-8xl xxs:text-8xl">Welcome!</h1>
+                <p className="text-2xl">I'm {name}</p>
+              </div>
+            </section>
           </div>
-        </section>
-        <section className="mt-10" id="about">
-          <About />
-        </section>
-        <section id="projects" className="pt-3 mt-6">
-          <Projects />
-        </section>
-        <section className="mt-10 mb-8">
-          <Technologies />
-        </section>
+        </Element>
+        <div className="container mx-auto">
+          <Element name="about">
+            <section className="pt-5 mt-10" id="about">
+              <ScrollAnimation animateIn="fadeInLeft" duration={1}>
+                <About />
+              </ScrollAnimation>
+            </section>
+          </Element>
+          <Element name="projects">
+            <section id="projects" className="pt-6 mt-6">
+              <ScrollAnimation animateIn="fadeInRight" duration={1}>
+                <Projects />
+              </ScrollAnimation>
+            </section>
+          </Element>
+          <Element name="technologies">
+            <section id="technologies" className="pt-5 mt-10 mb-8">
+              <ScrollAnimation animateIn="fadeInLeft" duration={1}>
+                <Technologies />
+              </ScrollAnimation>
+            </section>
+          </Element>
+          <Element name="contact">
+            <section id="contact" className="pt-5 mt-10 mb-8">
+              <ScrollAnimation animateIn="fadeInUp" duration={1}>
+                <Contact />
+              </ScrollAnimation>
+            </section>
+          </Element>
+        </div>
       </div>
       <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

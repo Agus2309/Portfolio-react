@@ -63,7 +63,7 @@ const Projects: React.FC = () => {
             <>
               <div className="flex flex-wrap">
                   <h1 className="text-3xl text-white font-semibold mb-5 ml-3 relative">
-                      Projects ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                      Projects 
                   </h1>
               </div>
               <div className="max-w-3xl mx-auto justify-center">
