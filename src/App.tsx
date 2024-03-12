@@ -8,7 +8,6 @@ import { Element, Link } from "react-scroll";
 import ScrollAnimation from 'react-animate-on-scroll';
 import { useEffect, useState } from "react";
 import { FaChevronDown, FaJava } from "react-icons/fa";
-import { MdJavascript, MdPhp } from "react-icons/md";
 
 const welcomes = ["Welcome!", "Bienvenido!", "Bem-vindo!", "Benvenuto!", "Willkommen!"];
 const icons = [<FaJava/>] //<MdJavascript/>, <MdPhp/> ]
