@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
     };
 
     return (
-        <header className="bg-transparent rounded text-white p-6">
+        <header className="bg-transparent rounded text-white p-6 ">
             <div className="flex justify-between max-w-12xl">
                 <div className="md:hidden">
                     <Button variant="outlined" onClick={toggleDrawer}>

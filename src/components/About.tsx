@@ -3,8 +3,8 @@ const name = "Jorge";
 const About: React.FC = () => {
 
     return (
-        <div className="container mx-auto py-12">
-            <h1 className="text-4xl text-center text-white font-semibold mb-8">About Me</h1>
+        <div className="container mx-auto py-6">
+            <h1 className="xl:text-5xl xxxs:text-4xl text-right text-white font-semibold mb-8">About Me</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="bg-indigo-900 rounded-lg shadow-lg p-8">
                     <h2 className="text-3xl text-white font-bold mb-4">Hi, I'm {name}</h2>

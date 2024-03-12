@@ -2,7 +2,7 @@ import React from "react";
 import 'tailwindcss/tailwind.css';
 
 const technologies = [
-    { name: "PHP", logo: "/svg/php.svg" },
+    { name: "PHP", logo: "/svg/php3.svg" },
     { name: "TypeScript", logo: "/svg/typescript.svg" },
     { name: "JavaScript", logo: "/svg/javascript.svg" },
     { name: "Node.js", logo: "/svg/nodejs.svg" },
@@ -13,9 +13,6 @@ const technologies = [
     { name: "Express.js", logo: "/svg/expressjs.svg" },
     { name: "Tailwindcss", logo: "/svg/tailwindcss.svg" },
     { name: "Bootstrap", logo: "/svg/bootstrap.svg" },
-    { name: "SASS", logo: "/svg/sass.svg" },
-    { name: "JQuery", logo: "/svg/jquery.svg" },
-    { name: "Rxjs", logo: "/svg/rxjs.svg" },
     { name: "MySQL", logo: "/svg/mysql.svg" },
     { name: "MariaDB", logo: "/svg/mariadb.svg" },
     { name: "PostgreSQL", logo: "/svg/postgresql.svg" },
@@ -27,25 +24,22 @@ const technologies = [
     { name: "Docker", logo: "/svg/docker.svg" },
     { name: "Linux", logo: "/svg/linux.svg" },
     { name: "Ubuntu", logo: "/svg/ubuntu.svg" },
-    { name: "Github", logo: "/svg/github.svg" },
-    { name: "VS Code", logo: "/svg/vscode.svg" },
-    { name: "Vercel", logo: "/svg/vercel.svg" },
 ];
 
 const Technologies: React.FC = () => {
     return (
         <>
-            <div className="flex flex-wrap">
-                <h1 className="text-3xl text-white font-semibold mb-5 ml-3 relative">
+            <div>
+                <h1 className="xl:text-5xl xxxs:text-3xl text-white text-right font-semibold mb-5 ml-3 relative">
                     Tools and Technologies 
                 </h1>
             </div>
-            <div className="flex flex-wrap justify-center max-w-3xl mx-auto">
+            <div className="flex flex-wrap justify-center max-w-3xl mx-auto sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-7xl">
                 {technologies.map((tech, index) => (
-                    <div key={index} className="w-full xxs:w-1/4 sm:w-1/5 md:w-1/5 lg:w-1/6 xl:w-1/8 mb-4 px-2 justify-center">
+                    <div key={index} className="w-full xxxs:w-1/2 xxs:w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 mb-4 px-2">
                         <div className="bg-white rounded flex items-center p-4 shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
                             <img src={tech.logo} alt={`${tech.name} Logo`} className="w-8 h-8 mr-2" />
-                            <p className="font-semibold">{tech.name}</p>
+                            <p className="xl:text-xl xl:ml-2 xxxs:ml-1 xxxs:text-lg font-semibold">{tech.name}</p>
                         </div>
                     </div>
                 ))}

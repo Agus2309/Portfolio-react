@@ -6,4 +6,18 @@
     display: none;
 }
 
+/* Modo claro */
+@media (prefers-color-scheme: light) {
+    #Layer_1 path {
+        --icon-color: black; /* Cambiar el color del ícono a blanco en modo claro */
+    }
+}
+
+/* Modo oscuro */
+@media (prefers-color-scheme: dark) {
+    #Layer_1 path {
+        --icon-color: white; /* Cambiar el color del ícono a negro en modo oscuro */
+    }
+}
+
 

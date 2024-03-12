@@ -4,14 +4,14 @@ import Technologies from "./components/Technologies";
 import Projects from "./components/Projects";
 import About from "./components/About";
 import Contact from "./components/contact";
-import { Element } from "react-scroll";
+import { Element, Link } from "react-scroll";
 import ScrollAnimation from 'react-animate-on-scroll';
 import { useEffect, useState } from "react";
-import { FaJava } from "react-icons/fa";
+import { FaChevronDown, FaJava } from "react-icons/fa";
 import { MdJavascript, MdPhp } from "react-icons/md";
 
 const welcomes = ["Welcome!", "Bienvenido!", "Bem-vindo!", "Benvenuto!", "Willkommen!"];
-const icons = [<FaJava/>, <MdJavascript/>, <MdPhp/> ]
+const icons = [<FaJava/>] //<MdJavascript/>, <MdPhp/> ]
 const name = 'Jorge';
 
 function App() {
@@ -37,31 +37,42 @@ function App() {
     <>
       <div className="min-h-screen min-w-full">
         <Element name="home" id="home">
-          <div
-            className="bg-cover bg-center pb-20"
-            style={{
-              height: '100vh',
-              backgroundImage: `url('/background2.jpg')`,
-            }}
-          >
-            <Navbar/>
-            <section className="mt-24 mb-24">
-              <div className="ml-8 text-white flex">
-                <div>
-                  <h1 className="text-4xl lg:text-8xl md:text-8xl sm:text-8xl xxs:text-8xl font-semibold">{welcomes[currentLanguageIndex]}</h1>
-                  <p className="text-2xl">I'm {name},</p>
-                  <p className="text-lg">a Fullstack Web Developer</p>
-                </div>
-                <div className="ml-2 text-9xl">
-                  {icons[currentIconIndex]}
-                </div>
-              </div>
-            </section>
-          </div>
-        </Element>
+            <div
+              className="bg-cover bg-center pb-20"
+              style={{
+                height: '100vh',
+                backgroundImage: `url('/background2.jpg')`,
+              }}
+            >
+              <Navbar/>
+              <ScrollAnimation animateIn="fadeInDown" duration={1}>
+                <section className="mt-24 mb-24">
+                  <div className="ml-8 text-white xl:flex xl:justify-around">
+                    <div className="xxxs:flex">
+                      <div>
+                        <h1 className="text-4xl xl:text-8xl lg:text-8xl md:text-8xl sm:text-8xl xxs:text-8xl font-semibold xxxs:mb-2">{welcomes[currentLanguageIndex]}</h1>
+                        <p className="font-semibold text-2xl xl:text-5xl">I'm {name},</p>
+                        <p className="font-semibold xl:text-4xl text-xl">a Fullstack Web Developer</p>
+                      </div>
+                      <div className="ml-2 text-9xl">
+                        {icons[currentIconIndex]}
+                      </div>
+                    </div>
+                    <div className="text-center xxxs:mt-12 xxxs:">
+                        <p className="xl:text-5xl text-3xl font-bold">This is my Portfolio</p>
+                        <div className="mx-auto flex justify-center items-center container bg-gray-900 p-3 rounded-xl xl:mt-5 xl:max-w-lg xxxs:mt-5 xxxs:max-w-60 xxxs:text-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
+                            <Link to="about" smooth={true} duration={900} className="xl:text-4xl xl:font-semibold mr-2 xxxs:font-bold">See my work</Link>
+                            <FaChevronDown className="mt-1 ml-5"/>
+                        </div>
+                    </div>
+                  </div>
+                </section>
+              </ScrollAnimation>
+            </div>
+          </Element>
         <div className="container mx-auto">
           <Element name="about">
-            <section className="pt-5 mt-10" id="about">
+            <section className="pt-2 mt-2" id="about">
               <ScrollAnimation animateIn="fadeInLeft" duration={1}>
                 <About />
               </ScrollAnimation>
