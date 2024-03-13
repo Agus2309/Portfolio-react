@@ -216,7 +216,7 @@ const Projects: React.FC = () => {
             sx={{ fontSize: "16px" }}
             onClick={() => window.open(livePage, "_blank")}
           >
-            See live page
+            See my project
           </Button>
           <Button
             variant="outlined"
