@@ -211,7 +211,7 @@ const Projects: React.FC = () => {
         </Box>
       </div>
       <div className="mt-8 max-w-12xl">
-        <div className="flex mx-auto justify-around mb-5">
+        <div className="flex mx-auto justify-center space-x-10 mb-5">
           <Button
             variant="outlined"
             sx={{ fontSize: "16px" }}
