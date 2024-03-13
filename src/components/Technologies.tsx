@@ -36,9 +36,9 @@ const Technologies: React.FC = () => {
             </div>
             <div className="flex flex-wrap justify-center max-w-3xl mx-auto sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-7xl">
                 {technologies.map((tech, index) => (
-                    <div key={index} className="w-full xxxs:w-1/2 xxs:w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 mb-4 px-2">
-                        <div className="bg-white rounded flex items-center p-4 shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
-                            <img src={tech.logo} alt={`${tech.name} Logo`} className="w-8 h-8 mr-2" />
+                    <div key={index} className="w-full xxxs:w-1/2 xxs:w-1/3 sm:w-1/3 md:w-1/3 lg:w-1/4 xl:w-1/4 mb-4 px-2">
+                        <div className="bg-white rounded-xl flex items-center p-4 shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
+                            <img src={tech.logo} alt={`${tech.name} Logo`} className="w-9 h-9 mr-1" />
                             <p className="xl:text-xl xl:ml-2 xxxs:ml-1 xxxs:text-lg font-semibold">{tech.name}</p>
                         </div>
                     </div>
