@@ -1,0 +1,30 @@
+{
+    "navbar": {
+      "home": "Inicio",
+      "about": "Acerca de",
+      "projects": "Proyectos",
+      "technologies": "Tecnologías",
+      "contact": "Contacto"
+    },
+    "welcome": "¡Bienvenido!",
+    "about": {
+      "title": "Acerca de Mí",
+      "description": "Soy un Desarrollador Web Fullstack con experiencia en la construcción de aplicaciones web utilizando tecnologías modernas."
+    },
+    "projects": {
+      "title": "Proyectos",
+      "viewLivePage": "Ver Página en Vivo",
+      "viewRepo": "Ver Repositorio"
+    },
+    "technologies": {
+      "title": "Tecnologías Utilizadas"
+    },
+    "contact": {
+      "title": "Contáctame",
+      "name": "Nombre",
+      "email": "Correo Electrónico",
+      "message": "Mensaje",
+      "send": "Enviar"
+    }
+  }
+  

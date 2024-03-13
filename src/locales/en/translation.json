@@ -1,0 +1,30 @@
+{
+    "navbar": {
+      "home": "Home",
+      "about": "About",
+      "projects": "Projects",
+      "technologies": "Technologies",
+      "contact": "Contact"
+    },
+    "welcome": "Welcome!",
+    "about": {
+      "title": "About Me",
+      "description": "I am a Fullstack Web Developer with experience in building web applications using modern technologies."
+    },
+    "projects": {
+      "title": "Projects",
+      "viewLivePage": "View Live Page",
+      "viewRepo": "View Repository"
+    },
+    "technologies": {
+      "title": "Technologies Used"
+    },
+    "contact": {
+      "title": "Contact Me",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send"
+    }
+  }
+  
