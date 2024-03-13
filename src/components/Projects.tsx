@@ -10,11 +10,11 @@ import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
 
 
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews, { interval: 5000 });
+const AutoPlaySwipeableViews = autoPlay(SwipeableViews, { interval: 8000 });
 
 const images = [
   {
-    label: "Web System for device and users management (Laravel)",
+    label: "Web System for device and users management",
     imgPath:
       "https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60",
     livePage: "",
@@ -71,8 +71,8 @@ const images = [
     label: "CSV Parser",
     imgPath:
       "https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60",
-    livePage: "",
-    gitRepo: "",
+    livePage: "https://csv-parser-sp-test.vercel.app/",
+    gitRepo: "https://github.com/Agus2309/CSV-Parser-SPTest",
     technologies:[
       {name: "React", logo: "/svg/react.svg"},
       {name: "Tailwindcss", logo: "/svg/tailwindcss.svg"},
@@ -113,7 +113,7 @@ const Projects: React.FC = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setActiveStep((prevActiveStep) => (prevActiveStep + 1) % maxSteps);
-    }, 5000);
+    }, 8000);
 
     return () => clearInterval(intervalId);
   }, [maxSteps]);

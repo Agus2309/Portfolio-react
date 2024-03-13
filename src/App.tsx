@@ -7,7 +7,7 @@ import Contact from "./components/contact";
 import { Element } from "react-scroll";
 import ScrollAnimation from 'react-animate-on-scroll';
 import { useEffect, useState } from "react";
-import { FaChevronDown, FaJava } from "react-icons/fa";
+import { FaArrowDown, FaJava } from "react-icons/fa";
 
 const welcomes = ["Welcome!", "Bienvenido!", "Bem-vindo!", "Benvenuto!", "Willkommen!"];
 const icons = [<FaJava/>] //<MdJavascript/>, <MdPhp/> ]
@@ -61,7 +61,7 @@ function App() {
                         <p className="xl:text-5xl text-3xl font-bold">This is my Portfolio</p>
                         <div className="max-w-96 mx-auto flex justify-center items-center container bg-black p-3 rounded-xl xl:mt-5 xxxs:mt-5 xxxs:max-w-60 xxxs:text-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
                             <a href="#about" className="xl:text-4xl xl:font-semibold mr-2">See my work</a>
-                            <FaChevronDown className="mt-1 ml-5"/>
+                            <FaArrowDown className="mt-1 ml-5"/>
                         </div>
                     </div>
                   </div>
