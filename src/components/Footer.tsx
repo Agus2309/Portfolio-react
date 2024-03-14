@@ -4,7 +4,7 @@ import { MdMail } from 'react-icons/md';
 const Footer: React.FC = () => {
     return (
         <>
-            <footer className="bg-gray-600 rounded pt-5 p-4 text-white text-center static bottom-0">
+            <footer className="bg-gray-600 rounded pt-5 p-4 text-white text-center static bottom-0 xxxs:rounded-none xl:rounded-t-sm">
             <p className='mt-2'>&copy; 2024 Agus2309 | All rights reserved.</p>
                 <div className="flex justify-center items-center mt-6 space-x-4">
                     <a href="https://www.linkedin.com/in/agustin-harris">

@@ -5,8 +5,11 @@ import ApiOutlinedIcon from '@mui/icons-material/ApiOutlined';
 import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-scroll';
+import { useTranslation } from 'react-i18next';
+import i18n from '../i18n';
 
 const Navbar: React.FC = () => {
+    const { t } = useTranslation();
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
     const toggleDrawer = () => {
@@ -18,6 +21,10 @@ const Navbar: React.FC = () => {
         document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     };
 
+    const handleChangeLanguage = (language: string | undefined) => {
+        i18n.changeLanguage(language);
+      };
+    
     return (
         <header className="bg-transparent rounded text-white p-6">
             <div className="flex justify-between max-w-12xl">
@@ -34,16 +41,24 @@ const Navbar: React.FC = () => {
                     <ArrowForwardIosOutlinedIcon />
                 </div>
                 <div className="hidden md:flex lg:flex xl:flex space-x-8 items-center">
-                    <Link to="home" smooth={true} duration={900} className="text-white hover:text-gray-300 text-2xl font-semibold">Home</Link>
-                    <Link to="about" smooth={true} duration={900} className="text-white hover:text-gray-300 text-2xl font-semibold">About</Link>
-                    <Link to="projects" smooth={true} duration={900} className="text-white hover:text-gray-300 text-2xl font-semibold">Projects</Link>
-                    <Link to="technologies" smooth={true} duration={900} className="text-white hover:text-gray-300 text-2xl font-semibold">Technologies</Link>
-                    <Link to="contact" smooth={true} duration={900} className="text-white hover:text-gray-300 text-2xl font-semibold">Contact</Link>
+                    <Link to="home" smooth={true} duration={900} className="text-white hover:text-gray-300 text-2xl font-semibold">{t('navbar.home')}</Link>
+                    <Link to="about" smooth={true} duration={900} className="text-white hover:text-gray-300 text-2xl font-semibold">{t('navbar.about')}</Link>
+                    <Link to="projects" smooth={true} duration={900} className="text-white hover:text-gray-300 text-2xl font-semibold">{t('navbar.projects')}</Link>
+                    <Link to="technologies" smooth={true} duration={900} className="text-white hover:text-gray-300 text-2xl font-semibold">{t('navbar.technologies')}</Link>
+                    <Link to="contact" smooth={true} duration={900} className="text-white hover:text-gray-300 text-2xl font-semibold">{t('navbar.contact')}</Link>
                     <a href="file/example.pdf" download>
                         <Button variant="contained" className="flex-grow">
-                            Resume
+                            {t('navbar.resume')}
                         </Button>
                     </a>
+                    <select onChange={(e) => handleChangeLanguage(e.target.value)} defaultValue={i18n.language}>
+                        <option value="en">
+                            <img src='/svg/flags/uk.svg' alt='English' />
+                        </option>
+                        <option value="es">
+                            <img src='/svg/flags/uk.svg' alt='English' />
+                        </option>
+                    </select>
                 </div>
             </div>
             <Drawer anchor="left" open={isDrawerOpen} onClose={() => setIsDrawerOpen(false)} sx={{width: '20%', '& .MuiDrawer-paper': {
@@ -60,24 +75,24 @@ const Navbar: React.FC = () => {
                 >
                     <List>
                         <ListItem button onClick={() => handleSectionClick('home')} className="text-xl mb-2">
-                            Home
+                            {t('navbar.home')}
                         </ListItem>
                         <ListItem button onClick={() => handleSectionClick('about')} className="text-xl mb-2">
-                            About
+                            {t('navbar.about')}
                         </ListItem>
                         <ListItem button onClick={() => handleSectionClick('projects')} className="text-xl mb-2">
-                            Projects
+                            {t('navbar.projects')}
                         </ListItem>
                         <ListItem button onClick={() => handleSectionClick('technologies')} className="text-xl mb-2">
-                            Technologies
+                            {t('navbar.technologies')}
                         </ListItem>
                         <ListItem button onClick={() => handleSectionClick('contact')} className="text-xl mb-2">
-                            Contact
+                            {t('navbar.contact')}
                         </ListItem>
                         <ListItem button>
                             <a href="file/example.pdf" download>
                                 <Button sx={{ fontWeight: '600' }} variant="contained" className="flex-grow">
-                                    Resume
+                                    {t('navbar.resume')}
                                 </Button>
                             </a>
                         </ListItem>
