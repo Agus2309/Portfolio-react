@@ -4,12 +4,12 @@ import Technologies from "./components/Technologies";
 import Projects from "./components/Projects";
 import About from "./components/About";
 import Contact from "./components/contact";
-import { Element } from "react-scroll";
+import { Element, Link } from "react-scroll";
 import ScrollAnimation from 'react-animate-on-scroll';
 import { useEffect, useState } from "react";
 import { FaArrowDown, FaJava } from "react-icons/fa";
 
-const welcomes = ["Welcome!", "Bienvenido!", "Bem-vindo!", "Benvenuto!", "Willkommen!"];
+const welcomes = ["Welcome!"];
 const icons = [<FaJava/>] //<MdJavascript/>, <MdPhp/> ]
 const name = 'Jorge';
 
@@ -60,7 +60,7 @@ function App() {
                     <div className="text-center xxxs:mt-12 xxxs:">
                         <p className="xl:text-5xl text-3xl font-bold">This is my Portfolio</p>
                         <div className="max-w-96 mx-auto flex justify-center items-center container bg-black p-3 rounded-xl xl:mt-5 xxxs:mt-5 xxxs:max-w-60 xxxs:text-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
-                            <a href="#about" className="xl:text-4xl xl:font-semibold mr-2">See my work</a>
+                            <Link to="about" smooth={true} duration={900} className="text-white hover:text-gray-300 text-2xl font-semibold">See my work</Link>
                             <FaArrowDown className="mt-1 ml-5"/>
                         </div>
                     </div>
