@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button, Drawer, List, ListItem } from '@mui/material';
+import { Button, Drawer, List, ListItem, SelectChangeEvent } from '@mui/material';
 import ArrowBackIosNewOutlinedIcon from '@mui/icons-material/ArrowBackIosNewOutlined';
 import ApiOutlinedIcon from '@mui/icons-material/ApiOutlined';
 import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
@@ -7,9 +7,11 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-scroll';
 import { useTranslation } from 'react-i18next';
 import i18n from '../i18n';
+import { Select, MenuItem } from '@mui/material';
 
 const Navbar: React.FC = () => {
     const { t } = useTranslation();
+    const [language, setLanguage] = useState('en');
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
     const toggleDrawer = () => {
@@ -21,9 +23,11 @@ const Navbar: React.FC = () => {
         document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     };
 
-    const handleChangeLanguage = (language: string | undefined) => {
-        i18n.changeLanguage(language);
-      };
+    const handleChangeLanguage = (event: SelectChangeEvent<string>) => { // Change event type to SelectChangeEvent<string>
+        const selectedLanguage = event.target.value;
+        setLanguage(selectedLanguage);
+        i18n.changeLanguage(selectedLanguage);
+    };
     
     return (
         <header className="bg-transparent rounded text-white p-6">
@@ -51,14 +55,15 @@ const Navbar: React.FC = () => {
                             {t('navbar.resume')}
                         </Button>
                     </a>
-                    <select onChange={(e) => handleChangeLanguage(e.target.value)} defaultValue={i18n.language}>
-                        <option value="en">
-                            <img src='/svg/flags/uk.svg' alt='English' />
-                        </option>
-                        <option value="es">
-                            <img src='/svg/flags/uk.svg' alt='English' />
-                        </option>
-                    </select>
+                    <Select
+                        value={language}
+                        onChange={handleChangeLanguage}
+                        label="Language"
+                        variant="standard"
+                    >
+                        <MenuItem value="en">English</MenuItem>
+                        <MenuItem value="es">Español</MenuItem>
+                    </Select>
                 </div>
             </div>
             <Drawer anchor="left" open={isDrawerOpen} onClose={() => setIsDrawerOpen(false)} sx={{width: '20%', '& .MuiDrawer-paper': {
