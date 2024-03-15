@@ -1,14 +1,18 @@
 import { Button } from "@mui/material";
 import { MdMail } from "react-icons/md";
+import { useTranslation } from 'react-i18next';
 
 const mail = 'mimail@gmail.com';
 
 const Contact: React.FC = () => {
+
+    const { t } = useTranslation();
+
     return (
         <>
             <div className="bg-gray-900 text-white py-10 xl:max-w-2xl mx-auto">
                 <div className="max-w-4xl mx-auto px-6">
-                    <h2 className="text-4xl font-bold mb-8 text-center">Contact Me</h2>
+                    <h2 className="text-4xl font-bold mb-8 text-center">{t('contact.title')}</h2>
                     <div className="flex-col xl:flex-row md:flex-row">
                         <div className="md:w-1/2 mx-auto">
                             <p className="text-lg mb-4">

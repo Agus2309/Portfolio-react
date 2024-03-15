@@ -8,65 +8,60 @@ import { Element, Link } from "react-scroll";
 import ScrollAnimation from 'react-animate-on-scroll';
 import { useEffect, useState } from "react";
 import { FaArrowDown, FaJava } from "react-icons/fa";
+import { useTranslation } from 'react-i18next';
 
-const welcomes = ["Welcome!"];
 const icons = [<FaJava/>] //<MdJavascript/>, <MdPhp/> ]
-const name = 'Jorge';
 
 function App() {
-  const [currentLanguageIndex, setCurrentLanguageIndex] = useState(0);
   const [currentIconIndex, setCurrentIconIndex] = useState(0);
+  const { t } = useTranslation();
 
   useEffect(() => {
-    const languageInterval = setInterval(() => {
-      setCurrentLanguageIndex(prevIndex => (prevIndex + 1) % welcomes.length);
-    }, 3000);
 
     const iconInterval = setInterval(() => {
       setCurrentIconIndex(prevIndex => (prevIndex + 1) % icons.length);
     }, 5000);
 
     return () => {
-      clearInterval(languageInterval);
       clearInterval(iconInterval);
     };
   }, []);
 
   return (
     <>
+    
       <div className="min-h-screen min-w-full">
         <Element name="home" id="home">
             <div
-              className="bg-cover bg-center pb-20"
+              className="bg-cover bg-center pb-20 relative z-10"
               style={{
                 height: '100vh',
+                paddingTop: '20px',
                 backgroundImage: `url('/background2.jpg')`,
               }}
             >
               <Navbar/>
-              <ScrollAnimation animateIn="fadeInDown" duration={1}>
-                <section className="mt-24 mb-24">
+                <section className="xxxs:mt-36 xl:mt-36 mt-28 mb-24">
                   <div className="ml-8 text-white xl:flex xl:justify-around">
                     <div className="xxxs:flex">
-                      <div>
-                        <h1 className="text-4xl xl:text-8xl lg:text-8xl md:text-8xl sm:text-8xl xxs:text-8xl font-semibold xxxs:mb-2">{welcomes[currentLanguageIndex]}</h1>
-                        <p className="font-semibold text-2xl xl:text-5xl">I'm {name},</p>
-                        <p className="font-semibold xl:text-4xl text-xl">a Fullstack Web Developer</p>
+                      <div className="">
+                        <h1 className="text-4xl xl:text-8xl lg:text-8xl md:text-8xl sm:text-8xl xxs:text-8xl font-semibold xxxs:mb-2">{t('welcome')}</h1>
+                        <p className="font-semibold text-2xl xl:text-5xl">{t('me')}</p>
+                        <p className="font-semibold xl:text-4xl text-xl">{t('profession')}</p>
                       </div>
                       <div className="ml-2 text-9xl">
                         {icons[currentIconIndex]}
                       </div>
                     </div>
-                    <div className="text-center xxxs:mt-12 xxxs:">
-                        <p className="xl:text-5xl text-3xl font-bold">This is my Portfolio</p>
+                    <div className="text-center xxxs:mt-20 xl:mt-12">
+                        <p className="xl:text-5xl text-3xl font-bold">{t('portfolio')}</p>
                         <div className="max-w-96 mx-auto flex justify-center items-center container bg-black p-3 rounded-xl xl:mt-5 xxxs:mt-5 xxxs:max-w-60 xxxs:text-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
-                            <Link to="about" smooth={true} duration={900} className="text-white hover:text-gray-300 text-2xl font-semibold">See my work</Link>
+                            <Link to="about" smooth={true} duration={900} className="text-white hover:text-gray-300 text-2xl font-semibold">{t('more')}</Link>
                             <FaArrowDown className="mt-1 ml-5"/>
                         </div>
                     </div>
                   </div>
                 </section>
-              </ScrollAnimation>
             </div>
           </Element>
         <div className="container mx-auto">

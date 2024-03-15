@@ -30,10 +30,10 @@ const Navbar: React.FC = () => {
     };
     
     return (
-        <header className="bg-transparent rounded text-white p-6">
+        <nav className="fixed top-0 w-full bg-transparent text-white p-6 z-50">
             <div className="flex justify-between max-w-12xl">
                 <div className="md:hidden">
-                    <Button variant="outlined" onClick={toggleDrawer}>
+                    <Button variant="contained" size='large' onClick={toggleDrawer}>
                         <MenuIcon/>
                     </Button>
                 </div>
@@ -50,7 +50,7 @@ const Navbar: React.FC = () => {
                     <Link to="projects" smooth={true} duration={900} className="text-white hover:text-gray-300 text-2xl font-semibold">{t('navbar.projects')}</Link>
                     <Link to="technologies" smooth={true} duration={900} className="text-white hover:text-gray-300 text-2xl font-semibold">{t('navbar.technologies')}</Link>
                     <Link to="contact" smooth={true} duration={900} className="text-white hover:text-gray-300 text-2xl font-semibold">{t('navbar.contact')}</Link>
-                    <a href="file/example.pdf" download>
+                    <a href={language === 'es' ? 'file/example.pdf' : 'file/example2.pdf'} download>
                         <Button variant="contained" className="flex-grow">
                             {t('navbar.resume')}
                         </Button>
@@ -60,9 +60,14 @@ const Navbar: React.FC = () => {
                         onChange={handleChangeLanguage}
                         label="Language"
                         variant="standard"
-                    >
-                        <MenuItem value="en">English</MenuItem>
-                        <MenuItem value="es">Español</MenuItem>
+                        sx={{ color: 'white', '& .MuiSelect-icon': { color: 'white' } }}
+                        >
+                        <MenuItem value="en">
+                            <img src='/svg/flags/en.svg' className='h-8 w-8' />
+                        </MenuItem>
+                        <MenuItem value="es"> 
+                            <img src='/svg/flags/es.svg' className='h-8 w-8' />
+                        </MenuItem>
                     </Select>
                 </div>
             </div>
@@ -95,16 +100,32 @@ const Navbar: React.FC = () => {
                             {t('navbar.contact')}
                         </ListItem>
                         <ListItem button>
-                            <a href="file/example.pdf" download>
+                            <a href={language === 'es' ? 'file/example.pdf' : 'file/example2.pdf'} download>
                                 <Button sx={{ fontWeight: '600' }} variant="contained" className="flex-grow">
                                     {t('navbar.resume')}
                                 </Button>
                             </a>
                         </ListItem>
+                        <ListItem>
+                            <Select
+                                value={language}
+                                onChange={handleChangeLanguage}
+                                label="Language"
+                                variant="standard"
+                                sx={{ color: 'white', '& .MuiSelect-icon': { color: 'white' } }}
+                            >
+                                <MenuItem value="en">
+                                    <img src='/svg/flags/en.svg' className='h-8 w-8' />
+                                </MenuItem>
+                                <MenuItem value="es"> 
+                                    <img src='/svg/flags/es.svg' className='h-8 w-8' />
+                                </MenuItem>
+                            </Select>
+                        </ListItem>
                     </List>
                 </div>
             </Drawer>
-        </header>
+        </nav>
     );
 };
 

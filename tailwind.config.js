@@ -8,7 +8,8 @@ export default {
     extend: {
       colors: {
         customBlue: "#0b192f",
-        customNav: "#060429ff"
+        customNav: "#060435",
+        customNavbar: "#06033c"
       },
     },
     screens:{

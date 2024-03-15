@@ -1,5 +1,6 @@
 import React from "react";
 import 'tailwindcss/tailwind.css';
+import { useTranslation } from 'react-i18next';
 
 const technologies = [
     { name: "PHP", logo: "/svg/php3.svg" },
@@ -26,12 +27,17 @@ const technologies = [
     { name: "Ubuntu", logo: "/svg/ubuntu.svg" },
 ];
 
+
+
 const Technologies: React.FC = () => {
+
+    const { t } = useTranslation();
+
     return (
         <>
             <div>
                 <h1 className="xl:text-5xl xxxs:text-3xl text-white text-right font-semibold mb-5 ml-3 relative">
-                    Tools and Technologies 
+                    {t('technologies.title')}
                 </h1>
             </div>
             <div className="flex flex-wrap justify-center max-w-3xl mx-auto sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-7xl">

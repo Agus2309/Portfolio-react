@@ -8,13 +8,13 @@ import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
-
+import { useTranslation } from 'react-i18next';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews, { interval: 8000 });
 
 const images = [
   {
-    label: "Web System for device and users management",
+    label: 'projects.first',
     imgPath:
       "https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60",
     livePage: "",
@@ -26,7 +26,7 @@ const images = [
     ]
   },
   {
-    label: "App to create and manage events",
+    label: 'projects.second',
     imgPath:
       "https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60",
     livePage: "",
@@ -42,7 +42,7 @@ const images = [
     ]
   },
   {
-    label: "Independant presentation component for the App Event",
+    label: 'projects.third',
     imgPath:
       "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250",
     livePage: "",
@@ -54,7 +54,7 @@ const images = [
     ]
   },
   {
-    label: "Notes App",
+    label: 'projects.fourth',
     imgPath:
       "https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60",
     livePage: "",
@@ -68,7 +68,7 @@ const images = [
     ]
   },
   {
-    label: "CSV Parser",
+    label: 'projects.fifth',
     imgPath:
       "https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60",
     livePage: "https://csv-parser-sp-test.vercel.app/",
@@ -85,12 +85,13 @@ const images = [
 ];
 
 const Projects: React.FC = () => {
+  const { t } = useTranslation();
   const theme = useTheme();
   const [activeStep, setActiveStep] = useState(0);
   const maxSteps = images.length;
   const [livePage, setLivePage] = useState("");
   const [gitRepo, setGitRepo] = useState("");
-
+  
   const handleNext = () => {
     setActiveStep((prevActiveStep) => (prevActiveStep + 1) % maxSteps);
   };
@@ -121,12 +122,17 @@ const Projects: React.FC = () => {
   React.useEffect(() => {
     handleChangeLinks(activeStep);
   }, [activeStep]);
+
+  const imagesWithTranslatedLabels = images.map(image => ({
+    ...image,
+    label: t(image.label)
+  }));
   
   return (
     <>
       <div className="flex flex-wrap">
         <h1 className="xl:text-5xl xxxs:text-3xl text-white font-semibold mb-5 ml-3 relative">
-          Projects
+          {t('projects.title')}
         </h1>
       </div>
       <div className="max-w-3xl mx-auto justify-center xxs:max-w-96 sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-3xl">
@@ -143,7 +149,7 @@ const Projects: React.FC = () => {
               bgcolor: "background.default",
             }}
           >
-            <Typography>{images[activeStep].label}</Typography>
+            <Typography>{imagesWithTranslatedLabels[activeStep].label}</Typography>
           </Paper>
           <AutoPlaySwipeableViews
             axis={theme.direction === "rtl" ? "x-reverse" : "x"}
@@ -216,14 +222,14 @@ const Projects: React.FC = () => {
             sx={{ fontSize: "16px" }}
             onClick={() => window.open(livePage, "_blank")}
           >
-            See my project
+            {t('projects.viewLivePage')}
           </Button>
           <Button
             variant="outlined"
             sx={{ fontSize: "16px" }}
             onClick={() => window.open(gitRepo, "_blank")}
           >
-            See Github repo
+            {t('projects.viewRepo')}
           </Button>
         </div>
         <h1 className="text-center text-2xl text-white font-semibold">Technologies used</h1>
