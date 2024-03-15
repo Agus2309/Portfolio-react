@@ -45,11 +45,11 @@ const Navbar: React.FC = () => {
                     <ArrowForwardIosOutlinedIcon />
                 </div>
                 <div className="hidden md:flex lg:flex xl:flex space-x-8 items-center">
-                    <Link to="home" smooth={true} duration={900} className="text-white hover:text-gray-300 text-2xl font-semibold">{t('navbar.home')}</Link>
-                    <Link to="about" smooth={true} duration={900} className="text-white hover:text-gray-300 text-2xl font-semibold">{t('navbar.about')}</Link>
-                    <Link to="projects" smooth={true} duration={900} className="text-white hover:text-gray-300 text-2xl font-semibold">{t('navbar.projects')}</Link>
-                    <Link to="technologies" smooth={true} duration={900} className="text-white hover:text-gray-300 text-2xl font-semibold">{t('navbar.technologies')}</Link>
-                    <Link to="contact" smooth={true} duration={900} className="text-white hover:text-gray-300 text-2xl font-semibold">{t('navbar.contact')}</Link>
+                    <Link to="home" smooth={true} duration={900} className="rounded-md border-t-purple-700 border-solid border-2 p-2 text-secondary hover:text-white text-[18px] font-medium cursor-pointer">{t('navbar.home')}</Link>
+                    <Link to="about" smooth={true} duration={900} className="rounded-md border-t-purple-700 border-solid border-2 p-2 text-secondary hover:text-white text-[18px] font-medium cursor-pointer">{t('navbar.about')}</Link>
+                    <Link to="projects" smooth={true} duration={900} className="rounded-md border-t-purple-700 border-solid border-2 p-2 text-secondary hover:text-white text-[18px] font-medium cursor-pointer">{t('navbar.projects')}</Link>
+                    <Link to="technologies" smooth={true} duration={900} className="rounded-md border-t-purple-700 border-solid border-2 p-2 text-secondary hover:text-white text-[18px] font-medium cursor-pointer">{t('navbar.technologies')}</Link>
+                    <Link to="contact" smooth={true} duration={900} className="rounded-md border-t-purple-700 border-solid border-2 p-2 text-secondary hover:text-white text-[18px] font-medium cursor-pointer">{t('navbar.contact')}</Link>
                     <a href={language === 'es' ? 'file/example.pdf' : 'file/example2.pdf'} download>
                         <Button variant="contained" className="flex-grow">
                             {t('navbar.resume')}
