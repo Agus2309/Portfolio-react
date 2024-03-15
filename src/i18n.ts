@@ -32,17 +32,20 @@ const resources = {
         "fifth": "CSV Parser",
         "viewLivePage": "See my project",
         "viewRepo": "See github repo",
-        "Tech": "Technologies used"
+        "tech": "Technologies used"
       },
       "technologies": {
         "title": "Tools and Technologies"
       },
       "contact": {
         "title": "Contact Me",
-        "name": "Name",
-        "email": "Email",
-        "message": "Message",
-        "send": "Send"
+        "first": "Feel free to reach out to me if you have any questions or if you'd like to work together on a project.",
+        "second": "You can contact me via email or through my social media channels.",
+        "mail": "Email",
+        "social": "Social Media"
+      },
+      "Footer":{
+        "rights": "All rights reserved."
       }
     },
   },
@@ -74,17 +77,20 @@ const resources = {
         "fifth": "CSV Parser",
         "viewLivePage": "Ver el proyecto",
         "viewRepo": "Ver repo de github",
-        "Tech": "Tecnologías utilizadas"
+        "tech": "Tecnologías utilizadas"
       },
       "technologies": {
         "title": "Herramientas y Tecnologías"
       },
       "contact": {
         "title": "Contactame",
-        "first": "lorem ipsum",
-        "second": "lorem ipsum",
+        "first": "No dudes en ponerte en contacto conmigo si tenés alguna pregunta o si querés que trabajemos juntos en un proyecto.",
+        "second": "Podés contactarte conmigo por correo o por mis redes sociales.",
         "mail": "Correo",
         "social": "Redes Sociales"
+      },
+      "Footer":{
+        "rights": "All rights reserved."
       }
     },
   },

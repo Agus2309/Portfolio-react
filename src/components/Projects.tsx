@@ -232,7 +232,7 @@ const Projects: React.FC = () => {
             {t('projects.viewRepo')}
           </Button>
         </div>
-        <h1 className="text-center text-2xl text-white font-semibold">Technologies used</h1>
+        <h1 className="text-center text-2xl text-white font-semibold">{t('projects.tech')}</h1>
         <div className="mt-6 flex flex-wrap justify-center max-w-3xl mx-auto sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl" style={{height: '280px'}}>
           {images[activeStep].technologies.map((tech, index) => (
             <div
