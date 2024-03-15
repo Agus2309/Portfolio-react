@@ -75,14 +75,15 @@ function App() {
           <Element name="projects">
             <section id="projects" className="pt-6 mt-6">
               <ScrollAnimation animateIn="fadeInRight" duration={1}>
-                <Projects />
+                <Technologies />
+                
               </ScrollAnimation>
             </section>
           </Element>
           <Element name="technologies">
             <section id="technologies" className="pt-5 mt-10 mb-8">
               <ScrollAnimation animateIn="fadeInLeft" duration={1}>
-                <Technologies />
+                <Projects />
               </ScrollAnimation>
             </section>
           </Element>

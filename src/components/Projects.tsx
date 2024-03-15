@@ -70,7 +70,7 @@ const images = [
   {
     label: 'projects.fifth',
     imgPath:
-      "https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60",
+      "/img/projects/csv2.png",
     livePage: "https://csv-parser-sp-test.vercel.app/",
     gitRepo: "https://github.com/Agus2309/CSV-Parser-SPTest",
     technologies:[
@@ -157,6 +157,7 @@ const Projects: React.FC = () => {
             onChangeIndex={handleStepChange}
             enableMouseEvents
             interval={5000}
+            style={{ width: '100%', height: "auto", display: "block",}}
           >
             {images.map((step, index) => (
               <div key={step.label}>

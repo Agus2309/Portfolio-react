@@ -21,7 +21,10 @@ const resources = {
       "more": "See more",
       "about": {
         "title": "About Me",
-        "description": "I am a Fullstack Web Developer with experience in building web applications using modern technologies."
+        "sub1": "Professional Profile",
+        "sub2": "Development Experience",
+        "first": "FullStack Developer with knowledge in front-end and back-end technologies. Graduated as a Higher IT Systems Technician through the German dual system, with a theoretical-practical approach in all areas of IT. Always willing to improve and acquire new skills and knowledge.",
+        "second": "Throughout my journey in various web development projects, I have employed a variety of tools, frameworks and languages, contributing to their improvement. I am looking for an environment that challenges me intellectually, allowing me to expand my knowledge and contribute my talent to enhance the team's achievements."
       },
       "projects": {
         "title": "Projects",
@@ -65,8 +68,11 @@ const resources = {
       "portfolio": "Este es mi portfolio",
       "more": "Ver más",
       "about": {
-        "title": "About Me",
-        "description": "I am a Fullstack Web Developer with experience in building web applications using modern technologies."
+        "title": "Sobre Mí",
+        "sub1": "Perfil Profesional",
+        "sub2": "Experiencia en desarrollo",
+        "first": "Desarrollador FullStack con conocimientos en tecnologías front-end y back-end. Graduado  como Técnico Superior en Sistemas IT mediante el sistema dual alemán, con un enfoque teórico-práctico en todas las áreas de sistemas. Dispuesto siempre a mejorar y adquirir nuevas habilidades y conocimientos.",
+        "second": "Durante mi trayectoria en varios proyectos de desarrollo web, he empleado una variedad de herramientas, frameworks y lenguajes, aportando a la mejora de los mismos. Estoy en búsqueda de un entorno que me desafíe intelectualmente, permitiéndome expandir mis conocimientos y contribuir con mi talento para potenciar los logros del equipo."
       },
       "projects": {
         "title": "Proyectos",
