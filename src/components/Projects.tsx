@@ -130,11 +130,9 @@ const Projects: React.FC = () => {
   
   return (
     <>
-      <div className="flex flex-wrap">
-        <h1 className="xl:text-5xl xxxs:text-3xl text-white font-semibold mb-5 ml-3 relative">
-          {t('projects.title')}
-        </h1>
-      </div>
+      <h1 className="xl:text-5xl xxxs:text-3xl text-white font-semibold mb-5 ml-3 text-right">
+        {t('projects.title')}
+      </h1>
       <div className="max-w-3xl mx-auto justify-center xxs:max-w-96 sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-3xl">
         <Box sx={{ flexGrow: 2 }}>
           <Paper
