@@ -9,8 +9,9 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import { useEffect, useState } from "react";
 import { FaArrowDown, FaJava } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
+//import InfiniteSlider from "./components/carousel";
 
-const icons = [<FaJava/>] //<MdJavascript/>, <MdPhp/> ]
+const icons = [<FaJava/>] //<MdJavascript/>, <MdPhp/>
 
 function App() {
   const [currentIconIndex, setCurrentIconIndex] = useState(0);
@@ -72,17 +73,16 @@ function App() {
               </ScrollAnimation>
             </section>
           </Element>
-          <Element name="projects">
-            <section id="projects" className="pt-6 mt-6">
-              <ScrollAnimation animateIn="fadeInRight" duration={1}>
-                <Technologies />
-                
-              </ScrollAnimation>
-            </section>
-          </Element>
           <Element name="technologies">
             <section id="technologies" className="pt-5 mt-10 mb-8">
               <ScrollAnimation animateIn="fadeInLeft" duration={1}>
+                <Technologies />
+              </ScrollAnimation>
+            </section>
+          </Element>
+          <Element name="projects">
+            <section id="projects" className="pt-6 mt-6">
+              <ScrollAnimation animateIn="fadeInRight" duration={1}>
                 <Projects />
               </ScrollAnimation>
             </section>

@@ -232,11 +232,11 @@ const Projects: React.FC = () => {
           </Button>
         </div>
         <h1 className="text-center text-2xl text-white font-semibold">{t('projects.tech')}</h1>
-        <div className="mt-6 flex flex-wrap justify-center max-w-3xl mx-auto sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl" style={{height: '280px'}}>
+        <div className="mt-6 flex flex-wrap justify-center max-w-3xl mx-auto sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-5xl" style={{ height: '280px' }}>
           {images[activeStep].technologies.map((tech, index) => (
             <div
               key={index}
-              className="w-full xxxs:w-1/2 xxs:w-1/3 sm:w-1/3 md:w-1/3 lg:w-1/4 xl:w-1/3 mb-4 px-2"
+              className="w-full xxxs:w-1/2 xxs:w-1/3 sm:w-1/3 md:w-1/3 lg:w-1/4 xl:w-1/4 mb-2 px-2"
             >
               <div className="bg-white rounded-xl flex items-center p-4 shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
                 <img

@@ -10,7 +10,7 @@ const Contact: React.FC = () => {
 
     return (
         <>
-            <div className="bg-gray-900 text-white py-10 xl:max-w-2xl mx-auto">
+            <div className="bg-gray-900 text-white py-6 xl:max-w-2xl mx-auto">
                 <div className="max-w-4xl mx-auto px-6">
                     <h2 className="text-4xl font-bold mb-8 text-center">{t('contact.title')}</h2>
                     <div className="flex-col xl:flex-row md:flex-row">
