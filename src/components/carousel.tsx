@@ -51,14 +51,14 @@ const InfiniteSlider: React.FC = () => {
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 2
+                    slidesToShow: 3i
                 }
             }
         ]
     };
 
     return (
-        <div className='max-w-6xl mx-auto bg-gray-900'>
+        <div className='max-w-6xl mx-auto'>
             <Slider {...settings}>
                 {technologies.map((tech, index) => (
                     <div key={index} className='mx-auto text-center'>
