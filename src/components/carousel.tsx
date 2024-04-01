@@ -51,7 +51,7 @@ const InfiniteSlider: React.FC = () => {
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 3i
+                    slidesToShow: 3
                 }
             }
         ]
