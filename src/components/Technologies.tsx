@@ -5,26 +5,19 @@ import { useTranslation } from 'react-i18next';
 const technologies = [
     { name: "PHP", logo: "/svg/php3.svg" },
     { name: "TypeScript", logo: "/svg/typescript.svg" },
-    { name: "JavaScript", logo: "/svg/javascript.svg" },
+   // { name: "JavaScript", logo: "/svg/javascript.svg" },
     { name: "Node.js", logo: "/svg/nodejs.svg" },
     { name: "Laravel", logo: "/svg/laravel.svg" },
     { name: "Angular", logo: "/svg/angular.svg" },
     { name: "React", logo: "/svg/react.svg" },
-    { name: "Vite", logo: "/svg/vite.svg" },
     { name: "Express.js", logo: "/svg/expressjs.svg" },
     { name: "Tailwindcss", logo: "/svg/tailwindcss.svg" },
     { name: "Bootstrap", logo: "/svg/bootstrap.svg" },
     { name: "MySQL", logo: "/svg/mysql.svg" },
-    { name: "MariaDB", logo: "/svg/mariadb.svg" },
-    { name: "PostgreSQL", logo: "/svg/postgresql.svg" },
     { name: "MongoDB", logo: "/svg/mongodb.svg" },
     { name: "TypeORM", logo: "/svg/typeorm.svg" },
     { name: "Prisma", logo: "/svg/prisma.svg" },
-    { name: "Apache", logo: "/svg/apache.svg" },
-    { name: "Xampp", logo: "/svg/xampp.svg" },
     { name: "Docker", logo: "/svg/docker.svg" },
-    { name: "Linux", logo: "/svg/linux.svg" },
-    { name: "Ubuntu", logo: "/svg/ubuntu.svg" },
 ];
 
 
