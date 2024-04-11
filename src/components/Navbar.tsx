@@ -50,7 +50,7 @@ const Navbar: React.FC = () => {
                     <Link to="technologies" smooth={true} duration={900} className="rounded-md border-t-purple-700 border-solid border-2 p-2 text-secondary hover:text-white text-[18px] font-medium cursor-pointer">{t('navbar.technologies')}</Link>
                     <Link to="projects" smooth={true} duration={900} className="rounded-md border-t-purple-700 border-solid border-2 p-2 text-secondary hover:text-white text-[18px] font-medium cursor-pointer">{t('navbar.projects')}</Link>
                     <Link to="contact" smooth={true} duration={900} className="rounded-md border-t-purple-700 border-solid border-2 p-2 text-secondary hover:text-white text-[18px] font-medium cursor-pointer">{t('navbar.contact')}</Link>
-                    <a href={language === 'es' ? 'file/example.pdf' : 'file/example2.pdf'} download>
+                    <a href={language === 'es' ? 'file/cv(esp).pdf' : 'file/cv(eng).pdf'} download>
                         <Button variant="outlined" sx={{fontWeight: '600', padding: '12px'}} className="flex-grow">
                             {t('navbar.resume')}
                         </Button>
@@ -100,7 +100,7 @@ const Navbar: React.FC = () => {
                             {t('navbar.contact')}
                         </ListItem>
                         <ListItem button>
-                            <a href={language === 'es' ? 'file/example.pdf' : 'file/example2.pdf'} download>
+                            <a href={language === 'es' ? 'file/cv(esp).pdf' : 'file/cv(eng).pdf'} download>
                                 <Button sx={{ fontWeight: '600' }} variant="contained" className="flex-grow">
                                     {t('navbar.resume')}
                                 </Button>

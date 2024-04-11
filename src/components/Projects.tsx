@@ -16,7 +16,7 @@ const images = [
   {
     label: 'projects.first',
     imgPath:
-      "https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60",
+      "https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60",
     livePage: "",
     gitRepo: "",
     technologies:[
@@ -161,12 +161,14 @@ const Projects: React.FC = () => {
               <div key={step.label}>
                 {Math.abs(activeStep - index) <= 2 ? (
                   <Box
+                    className="object-fit"
                     component="img"
                     sx={{
                       height: "auto",
                       display: "block",
                       maxWidth: "auto",
                       overflow: "hidden",
+                      objectFit: 'fill',
                       width: "100%",
                     }}
                     src={step.imgPath}

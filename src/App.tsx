@@ -44,7 +44,7 @@ function App() {
             >
               <Navbar/>
                 <section className="xxxs:mt-36 xl:mt-36 mt-28 mb-24">
-                  <div className="ml-8 text-white xl:flex xl:justify-around">
+                  <div className="ml-8 text-white xl:flex md:flex md:justify-around xl:justify-around items-center">
                     <div className="xxxs:flex">
                       <div className="">
                         <h1 className="text-4xl xl:text-8xl lg:text-8xl md:text-8xl sm:text-8xl xxs:text-8xl font-semibold xxxs:mb-2">{t('welcome')}</h1>
