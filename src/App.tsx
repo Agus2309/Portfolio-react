@@ -1,7 +1,7 @@
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Technologies from "./components/Technologies";
-import Projects from "./components/Projects";
+// import Projects from "./components/Projects";
 import About from "./components/About";
 import Contact from "./components/contact";
 import { Element, Link } from "react-scroll";
@@ -10,7 +10,6 @@ import { useEffect, useState } from "react";
 import { FaArrowDown, FaJava } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
 import InfiniteSlider from "./components/carousel";
-//import InfiniteSlider from "./components/carousel";
 
 const icons = [<FaJava/>] //<MdJavascript/>, <MdPhp/>
 
@@ -32,7 +31,7 @@ function App() {
   return (
     <>
     
-      <div className="min-h-screen min-w-full">
+      <div className="min-h-screen w-full">
         <Element name="home" id="home">
             <div
               className="bg-cover bg-center pb-20 relative z-10"
@@ -43,7 +42,7 @@ function App() {
               }}
             >
               <Navbar/>
-                <section className="xxxs:mt-36 xl:mt-36 mt-28 mb-24">
+                <section className="xxxs:mt-36 xl:mt-36 mt-28 mb-24 w-full max-w-7xl mx-auto">
                   <div className="ml-8 text-white xl:flex md:flex md:justify-around xl:justify-around items-center">
                     <div className="xxxs:flex">
                       <div className="">
@@ -68,31 +67,28 @@ function App() {
           </Element>
         <div className="container mx-auto">
           <Element name="about">
-            <section className="pt-5 mt-10" id="about">
+            <section className="pt-5 mt-10 w-full max-w-7xl mx-auto" id="about">
               <ScrollAnimation animateIn="fadeInLeft" duration={1}>
                 <About />
               </ScrollAnimation>
             </section>
           </Element>
           <Element name="technologies">
-            <section id="technologies" className="pt-5 mt-10 mb-8">
+            <section id="technologies" className="pt-5 mt-10 mb-8 w-full max-w-7xl mx-auto">
               <ScrollAnimation animateIn="fadeInLeft" duration={1}>
                 <Technologies />
-                <div className="mt-5">
-                  <InfiniteSlider></InfiniteSlider>
-                </div>
               </ScrollAnimation>
             </section>
           </Element>
           <Element name="projects">
-            <section id="projects" className="pt-6 mt-6">
+            <section id="projects" className="pt-6 mt-6 w-full max-w-7xl mx-auto">
               <ScrollAnimation animateIn="fadeInRight" duration={1}>
-                <Projects />
+                  <InfiniteSlider />
               </ScrollAnimation>
             </section>
           </Element>
           <Element name="contact">
-            <section id="contact" className="pt-5 mt-10 mb-8">
+            <section id="contact" className="pt-5 mt-10 mb-8 w-full max-w-7xl mx-auto">
               <ScrollAnimation animateIn="fadeInUp" duration={1}>
                 <Contact />
               </ScrollAnimation>

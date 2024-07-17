@@ -45,7 +45,6 @@ const Navbar: React.FC = () => {
                     <ArrowForwardIosOutlinedIcon />
                 </div>
                 <div className="hidden md:flex lg:flex xl:flex space-x-8 items-center">
-                    <Link to="home" smooth={true} duration={900} className="rounded-md border-t-purple-700 border-solid border-2 p-2 text-secondary hover:text-white text-[18px] font-medium cursor-pointer">{t('navbar.home')}</Link>
                     <Link to="about" smooth={true} duration={900} className="rounded-md border-t-purple-700 border-solid border-2 p-2 text-secondary hover:text-white text-[18px] font-medium cursor-pointer">{t('navbar.about')}</Link>
                     <Link to="technologies" smooth={true} duration={900} className="rounded-md border-t-purple-700 border-solid border-2 p-2 text-secondary hover:text-white text-[18px] font-medium cursor-pointer">{t('navbar.technologies')}</Link>
                     <Link to="projects" smooth={true} duration={900} className="rounded-md border-t-purple-700 border-solid border-2 p-2 text-secondary hover:text-white text-[18px] font-medium cursor-pointer">{t('navbar.projects')}</Link>
