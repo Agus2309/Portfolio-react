@@ -14,7 +14,7 @@ const About: React.FC = () => {
                     <p className="text-lg text-white">{t('about.first')}</p>
                 </div>
                 <div className="p-8">
-                    <h2 className="text-2xl text-white font-bold mb-4">{t('about.sub2')}</h2>
+                    <h2 className="text-2xl text-white font-bold mb-4 text-right">{t('about.sub2')}</h2>
                     <p className="text-lg text-white">
                         {t('about.second')}
                     </p>

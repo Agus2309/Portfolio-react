@@ -29,7 +29,7 @@ const Technologies: React.FC = () => {
     return (
         <>
             <div>
-                <h1 className="xl:text-5xl xxxs:text-3xl text-white text-left font-semibold mb-5 ml-3 relative">
+                <h1 className="xl:text-5xl xxxs:text-3xl text-white text-left font-semibold mb-8 ml-3 relative">
                     {t('technologies.title')}
                 </h1>
             </div>
